@@ -1,0 +1,49 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 108195
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 350656245387-akg1rd718nsrh74mptc1c4405so24p98.apps.googleusercontent.com
+            client-secret: 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
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (create, create-drop, validate, update)
+    properties:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 10MB
+#      max-request-size: 10MB
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    operations-sorter: method
+    tags-sorter: alpha
+    try-it-out-enabled: true
+    filter: true
+  api-docs:
+    path: /v3/api-docs
+
+doi:
+  jwtSecret: UECpHV4QHJHHEQFn1zBnhipcV4ZP300hUECpHV4QHJHHEQFn1zBnhipcV4ZP300hUECpHV4QHJHHEQFn1zBnhipcV4ZP300h
+  jwtExpiration: 86400000
+# Cấu hình multipart cho tải lên file
+
+

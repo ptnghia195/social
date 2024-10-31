@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Butter_Social
+    username: postgres
+    password: 108195
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (create, create-drop, validate, update)
+    properties:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    operations-sorter: method
+    tags-sorter: alpha
+    try-it-out-enabled: true
+    filter: true
+  api-docs:
+    path: /v3/api-docs
+
+doi:
+  jwtSecret: UECpHV4QHJHHEQFn1zBnhipcV4ZP300hUECpHV4QHJHHEQFn1zBnhipcV4ZP300hUECpHV4QHJHHEQFn1zBnhipcV4ZP300h
+  jwtExpiration: 86400000
